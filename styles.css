@@ -220,6 +220,7 @@ main .wrapper{
     margin-bottom: 16px;
     container-type: inline-size;
     container-name: navbar;
+    animation: navbar-appears 1.5s ease-in-out ;
 }
 
 
@@ -250,6 +251,19 @@ main .wrapper{
 .navbar__buttons:hover{
     text-decoration: underline;
 }
+
+@keyframes navbar-appears {
+    from{
+        transform: translateY(-80px);
+        opacity: 0;
+    }
+
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
 /* ----- Navbar responsive starts ----- */
 
 @container navbar (min-width: 400px){
@@ -269,6 +283,7 @@ main .wrapper{
 
 .hero{
     padding: 0 16px;
+    animation: hero-appears 1.5s ease-in-out .5s both;
 }
 
 .hero__subtitle{
@@ -284,6 +299,20 @@ main .wrapper{
 
 .hero__description{
     color: var(--color-fg-low);
+}
+
+/* ----- HHero animation starts ----- */
+
+@keyframes hero-appears {
+    from{
+        transform: translateX(-80px);
+        opacity: 0;
+    }
+
+    to{
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
 
 .side__content{
