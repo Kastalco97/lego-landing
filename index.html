@@ -4,41 +4,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="/styles.css">
+
+    <!-- Lato font family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+
+    <!-- Foogle Fonts icons -->
+     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 </head>
 <body>
-    <div class="page">
+    <main>
         <!--Main content-->
-        <main>
             <div class="wrapper">
                 <nav class="navbar">
                     <div class="navbar__content">
-                        <img src="" alt="">
+                        <img src="https://assets.lego.com/logos/v8.6.0/brand-lego.svg" alt="Logo Lego">
                         
-                        <ul>
-                            <li> <a href="">Exclusives</a> </li>
-                            <li> <a href="">News</a> </li>
-                            <li> <a href="">Gift cards</a> </li>
-                            <li> <a href="">Find a store</a> </li>
+                        <ul class="navbar__options">
+                            <li> <a class="navbar__buttons" href="#">Exclusives</a> </li>
+                            <li> <a class="navbar__buttons" href="#">News</a> </li>
+                            <li> <a class="navbar__buttons" href="#">Gift cards</a> </li>
+                            <li> <a class="navbar__buttons" href="#">Find a store</a> </li>
                         </ul>
+
+                        <button class="btn btn--icon-only-md btn--secondary">
+                            <span class="material-symbols-outlined">
+                                menu
+                            </span>
+                        </button>
                     </div>
                 </nav>
-            </div>
             
-            <section class="main-content">
-                <p>Design your</p>
-                <h1>Super Hero</h1>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere consectetur magni eum odio minus est ea atque ut. Accusamus, perferendis aspernatur reprehenderit eveniet dignissimos soluta officiis deserunt id odit necessitatibus?
-                </p>
-            </section>
+                <section class="hero">
+                    <p class="hero__subtitle">Design your</p>
+                    <h1 class="hero__title">Super Hero</h1>
+                    <p class="hero__description">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere consectetur magni eum odio minus est ea atque ut.
+                    </p>
+                </section>
 
-            <section class="side__content">
-                <p>Super Man</p>
-                <img src="" alt="">
-                <div></div>
-            </section>
+                <aside class="side__content">
+                    <span class="side__content__label">Super Man</span>
+                    
+                    <div class="side__content__img">
+                        <img src="https://i.ibb.co/x16pz1x/super-man.png" alt="Lego toy">
+                    <div>
+                    </div>
+                    
 
-            <footer>
+                    </div>
+                </aside>
+
+            </div>
+    </main>
+
+        <footer>
                 <div>
                     <img src="" alt="">
                 </div>
@@ -51,19 +73,18 @@
                     <img src="" alt="">
                 </div>
 
-            </footer>
-
-        </main>
+        </footer>
 
         <!-- Loader -->
-         <section>
+        <section class="loader">
+            <div class="loader__item"></div>
+            <div class="loader__item"></div>
+            <div class="loader__item"></div>
+        </section>
 
-         </section>
+        <!-- Modal -->
+        <section>
 
-         <!-- Modal -->
-          <section>
-
-         </section>
-    </div>
+        </section>
 </body>
 </html>

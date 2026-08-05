@@ -1,0 +1,398 @@
+:root{
+    --yellow: #ffd502;
+    --blue: #005AD2;
+    --red: #E3000B;
+
+    --main-font-family: 'Lato', sans-serif;
+    
+    --line-height-none: 1;
+    --line-height-normal: 1.5;
+    --line-height-expanded: 1.8;
+
+    --font-size-display-xl:48px;
+    --font-size-display-lg:44px;
+    --font-size-display-md:40px;
+
+    --font-size-heading-xl:36px;
+    --font-size-heading-lg:32px;
+    --font-size-heading-md:24px;
+
+    --font-size-body-lg: 20px;
+    --font-size-body-md: 16px;
+    --font-size-body-sm: 13px;
+    --content-max-width: 800px;
+
+    --color-fg-high: #1d1d1d;
+    --color-fg-medium: #484747;
+    --color-fg-low: #6e6e6e;
+
+
+}
+
+*,*::after, *::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: var(--line-height-none);
+}
+
+/* h1, h2, h3{
+    line-height: var(--line-height-normal);
+} */
+
+h1{
+    font-size: var(--font-size-heading-xl);
+}
+
+h2{
+    font-size: var(--font-size-heading-lg);
+}
+
+h3{
+    font-size: var(--font-size-heading-md);
+}
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}
+
+body{
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: var(--main-font-family);
+    color: var(--color-fg-medium);
+
+}
+
+/*--------- Button component ---------*/
+.btn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  width: fit-content;
+  border-radius: 1000px;
+  font-weight: 600;
+  white-space: nowrap;
+
+}
+
+.btn:focus{
+  outline: 2px solid var(--color-bg-1-inverted);
+  outline-offset: 2px;
+}
+
+/*----- Sizes -----*/
+.btn--xs{
+  height: 28px;
+  font-size: 13px;
+  padding: 0 4px;
+  gap: 4px;
+}
+
+.btn--sm{
+  height: 32px;
+  font-size: 13px;
+  padding: 0 8px;
+  gap: 8px;
+}
+
+.btn--md{
+  height: 36px;
+  font-size: 16px;
+  padding: 0 12px;
+  gap: 8px;
+}
+
+.btn--lg{
+  height: 48px;
+  font-size: 18px;
+  padding: 0 24px;
+  gap: 8px;
+}
+
+/*--- button icon ---*/
+
+.btn--icon-only-xs{
+  height: 28px;
+  width: 28px;
+}
+
+.btn--icon-only-sm{
+  height: 32px;
+  width: 32px;
+}
+
+
+.btn--icon-only-md{
+  height: 36px;
+  width: 36px;
+}
+
+.btn--icon-only-lg{
+  height: 40px;
+  width: 40px;
+}
+
+/*----- Hierarchy and states -----*/
+
+/*----- Primary -----*/
+.btn--primary{
+  background-color: #f47d20;
+  color: black;
+  transition: background-color .3s ease;
+}
+
+.btn--primary:hover{
+  background-color: #b73700;
+}
+
+.btn--primary:active{
+  background-color: #982e00;
+}
+
+
+/*----- Secondary -----*/
+
+.btn--secondary {
+  background-color: #f2f2f2;
+  transition: background-color .3s ease;
+  
+}
+
+.btn--secondary:hover {
+  background-color: #e5e5e5;
+}
+
+.btn--secondary:active {
+  background-color: #e5e5e5;
+}
+
+/*----- Tertiary -----*/
+
+.btn--tertiary {
+  background-color: transparent;
+  color: #5C5C5C;
+  transition: background-color .3s ease;
+  
+}
+
+.btn--tertiary:hover {
+  background-color: #00000010;
+}
+
+.btn--tertiary:active {
+  background-color: #00000020;
+}
+
+/*--------Button ends--------*/
+
+
+main{
+    width: 100%;
+    position: relative;
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main .wrapper{
+    width: 100%;
+    max-width: var(--content-max-width);
+    /* display: grid;
+    grid-template-columns: repeat(2, 1fr); */
+}
+
+.navbar{
+    width: 100%;
+    height: 64px;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+    container-type: inline-size;
+    container-name: navbar;
+}
+
+
+.navbar__content{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    
+
+}
+
+.navbar__content img{
+    width: 40px;
+}
+
+.navbar__options{
+    display: none;
+    gap: 8px;
+}
+
+.navbar__buttons{
+    font-size: var(--font-size-body-md);
+    color: black;
+}
+
+.navbar__buttons:hover{
+    text-decoration: underline;
+}
+/* ----- Navbar responsive starts ----- */
+
+@container navbar (min-width: 400px){
+    .navbar__options{
+        display: flex;
+    }
+
+    .navbar__content .btn{
+        display: none;
+    }
+}
+
+/* ----- Navbar ends  ----- */
+
+
+/* ----- Hero starts ----- */
+
+.hero{
+    padding: 0 16px;
+}
+
+.hero__subtitle{
+    width: 100%;
+    font-size: clamp(var(--font-size-body-md), 8dvw, var(--font-size-display-md));;
+}
+
+.hero__title{
+    font-size: clamp(var(--font-size-display-lg), 10dvw, var(--font-size-display-xl));
+    color: var(--color-fg-high);
+    margin-bottom: 16px;
+}
+
+.hero__description{
+    color: var(--color-fg-low);
+}
+
+.side__content{
+    width: 100%;
+    margin-top: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.side__content__label{
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    letter-spacing: -4%;
+}
+
+.side__content__img{
+    width: calc(100% - 130px);
+    overflow: hidden;
+}
+
+.side__content img{
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* ----- Hero responsive starts ----- */
+
+@media (min-width: 768px){
+    
+    
+    
+    main .wrapper{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .navbar{
+        grid-column: 1 / span 3;
+    }
+
+    .hero{
+        grid-column: 1 / span 2;
+    }
+}
+
+/* ----- Hero ends ----- */
+
+
+/* ----- Loader starts ----- */
+
+.loader{
+    position: absolute;
+    top: 0;
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    animation: loade 2s forwards;
+    visibility: hidden;
+    
+
+}
+
+@keyframes loader{
+    90%{
+        opacity: 1;
+        visibility: visible;
+    }
+
+    100%{
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+.loader__item{
+    width: 20px;
+    height: 20px;
+    margin: 8px;
+    background-color: blue;
+    border-radius: 50%;
+    animation: scalin 1.5s ease-in-out -2s infinite;
+    
+}
+
+.loader__item:nth-child(2){
+    animation-delay: 0.2s;
+    
+}
+
+.loader__item:nth-child(3){
+    animation-delay: 0.4s;
+    
+}
+
+@keyframes scaling{
+    0%, 100%{
+        transform: scale(0.5);
+    }
+
+    50%{
+        transform: scale(1.2);
+    }
+}
+
+/* ----- Loader ends ----- */
