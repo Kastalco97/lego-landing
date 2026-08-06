@@ -36,6 +36,14 @@
     line-height: var(--line-height-none);
 }
 
+html{
+    scrollbar-gutter: stable;
+}
+
+html:has(dialog[open]){
+    overflow: hidden;
+}
+
 /* h1, h2, h3{
     line-height: var(--line-height-normal);
 } */
@@ -574,13 +582,69 @@ footer{
 /* ----- Footer ends ----- */
 
 
-
-/* ----- Modal starts ----- */
-
-    
 /* ----- Element starts ----- */
 
+dialog{
+    opacity: 0;
+    translate: 0 -25vh;
+    transition: display .3s ease allow-discrete, opacity .3s ease, translate .3s ease;
+}
 
+dialog[open]{
+    display: block;
+    opacity: 1;
+    translate: 0 0;
+
+    @starting-style{
+        & {
+            opacity: 0;
+            translate: 0 -24vh
+        }
+    }
+}
+
+
+dialog::backdrop{
+    background-color: #00000070;
+    backdrop-filter: blur(4px);
+}
+
+.dialog{
+    margin: auto;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    width: 100%;
+    max-width: 400px;
+}
+
+.dialog__content{
+    background-color: #eeeeee;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.dialog__header{
+    display: flex;
+    align-items: center;
+    padding: 8px 16px;
+    background-color: white;
+}
+
+.dialog__title{
+    flex: 1 1 200px;
+}
+
+.dialog__body{
+    width: 100%;
+    padding: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 /* ----- Responsive element starts ----- */
 
@@ -590,11 +654,9 @@ footer{
 
 
 
-/* ----- Responsive modal starts ----- */
 
 
 
-/* ----- Modal ends ----- */
 
 
 

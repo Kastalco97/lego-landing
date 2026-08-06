@@ -13,6 +13,9 @@
 
     <!-- Foogle Fonts icons -->
      <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
+     <!-- js file linking -->
+      <script src="/script.js" defer></script>
 </head>
 <body>
     <main>
@@ -60,15 +63,15 @@
 
         <div class="footer__wrapper">
             <footer>
-                <div class="footer__img__container">
+                <div id="button1" class="footer__img__container">
                     <img src="https://i.ibb.co/M18p91c/batman.webp" alt="Batman">
                 </div>
 
-                <div class="footer__img__container">
+                <div id="button2" class="footer__img__container">
                     <img src="https://i.ibb.co/Xzsdvgg/robin.png" alt="Robin">
                 </div>
 
-                <div class="footer__img__container">
+                <div id="button3" class="footer__img__container">
                     <img src="https://i.ibb.co/tKWqw8J/spiderman.png" alt="Spiderman">
                 </div>
 
@@ -84,8 +87,22 @@
         </section>
 
         <!-- Modal -->
-        <dialog class="modal">
-
+        <dialog id="dialogToys" class="dialog">
+            <div class="dialog__content">
+                <div class="dialog__header">
+                    <h4 class="dialog__title">Batman limited edition</h4>
+                    <button class="dialog__close__button btn btn--icon-only-md btn--secondary">
+                    <span class="material-symbols-outlined">
+                        close
+                    </span>
+                </button>
+                </div>
+                <div class="dialog__body">
+                    <img style="width: 100px;" src="https://i.ibb.co/x16pz1x/super-man.png" alt="">
+                </div>
+                
+                
+            </div>
         </dialog>
 </body>
 </html>
