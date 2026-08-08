@@ -656,6 +656,14 @@ dialog::backdrop{
 
 
 /* ----- Dialog slider starts ----- */
+input[type=radio]{
+    display: none;
+}
+
+.card img{
+    width: 100%;
+    
+}
 
 .dialog__slider{
     width: 300px;
@@ -670,6 +678,7 @@ dialog::backdrop{
 }
 
 .card{
+    --card-bg-color: #ffd502;
     width: 50%;
     height: 100%;
     position: absolute;
@@ -680,9 +689,20 @@ dialog::backdrop{
     cursor: pointer;
     display: grid;
     place-items: center;
-    background-color: var(--yellow);
+    border-radius: 8px;
+    background-color: var(--card-bg-color);
+}
+.card--robin{
+    --card-bg-color: #ff9602;
 }
 
+.card--batman{
+    --card-bg-color: #8a8a8a;
+}
+
+.card img{
+    user-select: none;
+}
 #radio-1:checked ~ .dialog__cards #card-1,
 #radio-2:checked ~ .dialog__cards #card-2,
 #radio-3:checked ~ .dialog__cards #card-3 {
@@ -706,7 +726,6 @@ dialog::backdrop{
     opacity: 0.5;
     z-index: 0;
 }
-
 
 
 /* ----- Responsive Dialog slider starts ----- */
