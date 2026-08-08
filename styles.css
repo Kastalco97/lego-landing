@@ -516,7 +516,7 @@ main .wrapper{
 
 .footer__img__container img{
     position: absolute;
-    bottom: 32px;
+    bottom: 16px;
     width: clamp(100px, 10vw, 160px);
     object-fit: cover;
     object-position: center;
@@ -550,7 +550,7 @@ main .wrapper{
 footer{
     width: 100%;
     margin-top: 32px;
-    padding: 8px 20px 0;
+    padding: 32px 20px 0;
     display: flex;
     justify-content: space-evenly;
     align-items: end;
